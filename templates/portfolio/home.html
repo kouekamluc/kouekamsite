@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Welcome to My Portfolio</h1>
+            <p class="lead">I am a passionate web developer specializing in Django and Vue.js. I create modern, responsive web applications that provide a great user experience.</p>
+            <p>Explore my projects and skills below, or <a href="{% url 'contact' %}">contact me</a> to discuss collaborations.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/developer.svg' %}" class="img-fluid" alt="Developer Image">
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <h2>Featured Projects</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for project in projects %}
+        {% if project %}
+        <div class="col">
+            <div class="card h-100">
+                <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p>No projects found.</p>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+
+{% extends "base.html" %}
+{% load static%}
+{% block title %}About Me - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>About Me</h1>
+    
+    <section id="about">
+        <div class="container">
+            <div class="about-pic">
+                <img src="img/my-picture.jpg" class="about-img" alt="Beach Picture 2018">
+            </div>
+            <div class="about-content">
+                <h2>About</h2>
+                <p class="mg-bot-20">I’m Paul Armand M. Abecilla. I’m an experienced web designer based in Dasmariñas City, Cavite. I create <span>website solutions</span> for different types of businesses.</p>
+                <p class="mg-bot-20">I love to learn things about <span>Web Development</span>, specially on Javascript. Right now I’m still learning ReactJS and other JS frameworks and looking forward on creating Web Applications sometime in the future.</p>
+                <p>I love playing guitar together with my college friends. I go to concerts and gigs as well, specially on gigs of our local bands here at Manila.</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <div class="skills-content">
+                <h2>Skills</h2>
+                <p class="mg-bot-20">I’m a web designer / front end developer with more than 3 years of
+                work experience in creating websites, from website mockup using Adobe Photoshop up to making them ‘alive’ on the internet. And yes, they are responsive as well.</p>
+                <p>Check out my portfolio below to view my most recent projects.</p>
+                <div class="skills-icons">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3"></i>
+                    <i class="fab fa-wordpress"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-adobe"></i>
+                    <i class="fab fa-php"></i>
+                    <i class="fas fa-database"></i>
+                </div>
+                <!--<a href="#" class="btn-primary">View my Work</a>-->
+            </div>
+            <div class="skills-rating">
+                <p>HTML5 &amp; CSS3</p>
+                <div class="outer-meter">
+                    <div class="inner-meter html5"></div>
+                </div>
+                <p>Photoshop</p>
+                <div class="outer-meter">
+                    <div class="inner-meter photoshop"></div>
+                </div>
+                <p>Javascript &amp; jQuery</p>
+                <div class="outer-meter">
+                    <div class="inner-meter js-jquery"></div>
+                </div>
+                <p>Wordpress</p>
+                <div class="outer-meter">
+                    <div class="inner-meter wordpress"></div>
+                </div>
+                <p>PHP &amp; MySQL</p>
+                <div class="outer-meter">
+                    <div class="inner-meter php-mysql"></div>
+                </div>
+                <p>ReactJS and Redux (Learning in progress)</p>
+                <div class="outer-meter">
+                    <div class="inner-meter react-redux"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h2>Recent <span>Projects</span></h2>
+            <div class="thumbnails-wrapper">
+                <img src="img/thumbnail-1.jpg" alt="Garage Door Company sample" class="project-thumbnails" data-lity-target="img/project1.png">
+                <img src="img/thumbnail-2.jpg" alt="Automotive template sample" class="project-thumbnails" data-lity-target="img/project2.png">
+                <img src="img/thumbnail-3.jpg" alt="Construction sample template" class="project-thumbnails" data-lity-target="img/project3.png">
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <section id="quote">
+            <div class="container">
+                <h3>“Have no fear of perfection—you’ll never reach it.”</h3>
+                <p>–Salvador Dali</p>
+            </div>
+        </section>
+      
+ 
+</div>
+{% endblock %}
